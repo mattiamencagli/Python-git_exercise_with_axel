@@ -9,6 +9,8 @@ print("3: f(x)=x**3")
 print("4: f(x)=sin(x)")
 print("5: f(x)=cos(x)")
 print("6: f(x)=tan(x)")
+print("7: f(x)=exp(x)")
+print("8: f(x)=sqrt(abs(x))")
 print("If no number is passed the standard function is: f(x)=x\n")
 
 #handle command line
@@ -35,6 +37,11 @@ def f5(x):
 	return np.cos(x)
 def f6(x):
 	return np.tan(x)
+def f7(x):
+	return np.exp(x)
+def f8(x):
+	return np.sqrt(np.abs(x))
+	
 	
 if func_switch==1:
 	yval = f1(xval)
@@ -48,7 +55,10 @@ elif func_switch==5:
 	yval = f5(xval)
 elif func_switch==6:
 	yval = f6(xval)
-
+elif func_switch==7:
+	yval = f7(xval)
+elif func_switch==8:
+	yval = f8(xval)
 else:
 	print("%d IS NOT SUPPORTED STILL, wait for future updates.\n"%func_switch)
 	sys.exit()
