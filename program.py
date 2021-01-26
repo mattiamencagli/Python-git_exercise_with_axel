@@ -6,6 +6,9 @@ print("\nUsage: you should pass a number to the program to use one of the follow
 print("1: f(x)=x")
 print("2: f(x)=x**2")
 print("3: f(x)=x**3")
+print("4: f(x)=sin(x)")
+print("5: f(x)=cos(x)")
+print("6: f(x)=tan(x)")
 print("If no number is passed the standard function is: f(x)=x\n")
 
 #handle command line
@@ -22,12 +25,16 @@ xval = np.linspace(start,stop,int((stop-start)/step)+1);
 
 def f1(x):
 	return x
-
 def f2(x):
 	return x**2
-
 def f3(x):
 	return x**3
+def f4(x):
+	return np.sin(x)
+def f5(x):
+	return np.cos(x)
+def f6(x):
+	return np.tan(x)
 	
 if func_switch==1:
 	yval = f1(xval)
@@ -35,10 +42,18 @@ elif func_switch==2:
 	yval = f2(xval)
 elif func_switch==3:
 	yval = f3(xval)
+elif func_switch==4:
+	yval = f4(xval)
+elif func_switch==5:
+	yval = f5(xval)
+elif func_switch==6:
+	yval = f6(xval)
+
 else:
 	print("%d IS NOT SUPPORTED STILL, wait for future updates.\n"%func_switch)
 	sys.exit()
 	
+
 
 #plot lists
 plt.title("Plots")
