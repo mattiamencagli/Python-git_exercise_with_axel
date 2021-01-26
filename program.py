@@ -2,9 +2,17 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
+print("\nUsage: you should pass a number to the program to use one of the following functions: ")
+print("1: f(x)=x")
+print("2: f(x)=sin(x)")
+print("3: f(x)=cos(x)")
+print("4: f(x)=tan(x)")
+print("If no number is passed the standard function is: f(x)=x\n")
 
 #handle command line
-func_switch = int(sys.argv[1])
+func_switch = 1
+if(len(sys.argv)>1):
+	func_switch = int(sys.argv[1])
 
 
 #fill lists
@@ -30,6 +38,9 @@ elif func_switch==3:
 	yval = f3(xval)
 elif func_switch==4:
 	yval = f4(xval)
+else:
+	print("%d IS NOT SUPPORTED STILL, wait for future updates.\n"%func_switch)
+	sys.exit()
 
 
 #plot lists
