@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 
 print("\nUsage: you should pass a number to the program to use one of the following functions: ")
 print("1: f(x)=x")
+print("2: f(x)=exp(x)")
+print("3: f(x)=sqrt(abs(x))")
 print("If no number is passed the standard function is: f(x)=x\n")
 
 #handle command line
@@ -20,9 +22,17 @@ xval = np.linspace(start,stop,int((stop-start)/step)+1);
 
 def f1(x):
 	return x
+def f2(x):
+	return np.exp(x)
+def f3(x):
+	return np.sqrt(np.abs(x))
 	
 if func_switch==1:
 	yval = f1(xval)
+elif func_switch==2:
+	yval = f2(xval)
+elif func_switch==3:
+	yval = f3(xval)
 else:
 	print("%d IS NOT SUPPORTED STILL, wait for future updates.\n"%func_switch)
 	sys.exit()
