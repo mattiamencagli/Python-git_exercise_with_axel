@@ -2,9 +2,16 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
+print("\nUsage: you should pass a number to the program to use one of the following functions: ")
+print("1: f(x)=x")
+print("2: f(x)=x**2")
+print("3: f(x)=x**3")
+print("If no number is passed the standard function is: f(x)=x\n")
 
 #handle command line
-func_switch = int(sys.argv[1])
+func_switch = 1
+if(len(sys.argv)>1):
+	func_switch = int(sys.argv[1])
 
 
 #fill lists
@@ -28,7 +35,10 @@ elif func_switch==2:
 	yval = f2(xval)
 elif func_switch==3:
 	yval = f3(xval)
-
+else:
+	print("%d IS NOT SUPPORTED STILL, wait for future updates.\n"%func_switch)
+	sys.exit()
+	
 
 #plot lists
 plt.title("Plots")
