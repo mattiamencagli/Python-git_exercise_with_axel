@@ -13,8 +13,8 @@ if(len(sys.argv)>1):
 
 
 #fill lists
-start=-5
-stop=5
+start=-3
+stop=3
 step=0.1
 xval = np.linspace(start,stop,int((stop-start)/step)+1);
 
