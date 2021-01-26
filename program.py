@@ -15,9 +15,21 @@ xval = np.linspace(start,stop,int((stop-start)/step)+1);
 
 def f1(x):
 	return x
+def f2(x):
+	return np.sin(x)
+def f3(x):
+	return np.cos(x)
+def f4(x):
+	return np.tan(x)
 	
 if func_switch==1:
 	yval = f1(xval)
+elif func_switch==2:
+	yval = f2(xval)
+elif func_switch==3:
+	yval = f3(xval)
+elif func_switch==4:
+	yval = f4(xval)
 
 
 #plot lists
